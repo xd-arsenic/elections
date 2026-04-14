@@ -1048,6 +1048,16 @@ img { max-width: 100%; display: block; }
 
 /* ===== MOBILE ===== */
 @media (max-width: 480px) {
+  /* Index only: in-page section jumps — hidden to reduce nav clutter on small screens */
+  .nav-links > a[href="#evidence"],
+  .nav-links > a[href="#connections"],
+  .nav-links > a[href="#results"] {
+    display: none;
+  }
+  /* Subpages: Overview duplicates the logo link to home */
+  .nav-links > a[href="index.html"] {
+    display: none;
+  }
   .hero { padding: 90px 18px 32px; }
   .hero-stats { grid-template-columns: repeat(2, 1fr); max-width: 300px; }
   .nav-links a { font-size: 11px; padding: 5px 7px; }
