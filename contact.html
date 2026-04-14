@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | UCSD 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a href="index.html" class="nav-logo">CASE FILE: <span>UCSD 2026</span></a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <div class="nav-dropdown" id="caseDropdown">
+      <button class="nav-dropdown-trigger" onclick="this.parentElement.classList.toggle('open')">
+        Case Files
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="case13.html">Case 13 — Strike 1</a>
+        <a href="case24.html">Case 24 — Strike 2</a>
+        <a href="case27.html">Case 27 — Strike 3</a>
+        <div class="menu-divider"></div>
+        <a href="enforcement.html">Selective Enforcement</a>
+        <a href="bias.html">Structural Bias</a>
+        <a href="results.html">Vote Analysis</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="detail-hero">
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to case board
+  </a>
+  <h1 class="section-title" style="margin-bottom:8px">Get in Touch</h1>
+  <p class="section-desc" style="margin:0 auto;text-align:center;max-width:480px">If you have questions, want to learn more, or are a journalist, legal professional, or student who wants to help — reach out.</p>
+</section>
+
+<div class="detail-body">
+
+  <h2>Contact</h2>
+
+  <div class="context-grid" style="margin-top:16px">
+    <div class="context-card">
+      <h4>Email</h4>
+      <p><a href="mailto:contact@aydin.vote" style="color:var(--gold);font-weight:600">contact@aydin.vote</a></p>
+    </div>
+  </div>
+
+  <h2>About This Site</h2>
+  <p>This site was created to document the events of the Spring 2026 ASUCSD election and make them accessible to the public. Every claim is sourced directly from official ASUCSD records, case files, emails, and public documents.</p>
+
+  <p>No original source documents have been altered. The case files, grievance tracker, election results, Judicial Board opinions, and email correspondence referenced throughout this site are available in their original form.</p>
+
+  <h2>For Press & Legal</h2>
+  <p>If you are a journalist covering this story or a legal professional interested in the First Amendment implications, please reach out via the email above. We can provide access to the full compilation of original documents.</p>
+
+  <div class="detail-nav" style="margin-top:48px">
+    <a href="index.html">Back to Overview</a>
+    <a href="case27.html">Read Case 27</a>
+    <a href="results.html">See the Vote Math</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  All information sourced from official ASUCSD records, case files, and public documents.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

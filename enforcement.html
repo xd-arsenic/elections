@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Selective Enforcement | UCSD 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a href="index.html" class="nav-logo">CASE FILE: <span>UCSD 2026</span></a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <div class="nav-dropdown" id="caseDropdown">
+      <button class="nav-dropdown-trigger" onclick="this.parentElement.classList.toggle('open')">
+        Case Files
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="case13.html">Case 13 — Strike 1</a>
+        <a href="case24.html">Case 24 — Strike 2</a>
+        <a href="case27.html">Case 27 — Strike 3</a>
+        <div class="menu-divider"></div>
+        <a href="enforcement.html">Selective Enforcement</a>
+        <a href="bias.html">Structural Bias</a>
+        <a href="results.html">Vote Analysis</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="detail-hero">
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to case board
+  </a>
+  <div class="strike-badge info">Investigation</div>
+  <h1 class="section-title" style="margin-bottom:8px">Selective Enforcement &amp; Known Violations</h1>
+  <p class="section-desc" style="margin:0 auto;text-align:center;max-width:560px">The same evidence produced opposite outcomes depending on who was accused. And when the commission was told it was violating the Constitution, it chose to keep going.</p>
+  <div class="detail-nav" style="margin-top:20px">
+    <a href="case13.html">Case 13</a>
+    <a href="case24.html">Case 24</a>
+    <a href="case27.html">Case 27</a>
+    <a href="enforcement.html" class="active">Enforcement</a>
+    <a href="bias.html">Bias</a>
+    <a href="results.html">Results</a>
+  </div>
+</section>
+
+<div class="detail-body">
+
+  <h2>Two Cases, One Set of Facts, Opposite Results</h2>
+
+  <p>The electoral commission proceeded to rule in favor of the complainant in Case 13, citing Yelkovan in violation of A.S. Election Code Section 15(2)(b). In other instances, such as Case 10: Rieta v. Guzman, members of the Electoral Commission themselves filed grievances against those they believed violated the Elections Code — which did not occur in this instance, despite the matter being pointed out.</p>
+
+  <p>More seriously, the Commission dismissed Case 25: Dixit v. Miranda, which cited the same codes and evidence that other candidates were found guilty of in Case 13. The only material difference between the two cases was the identity of the defendants. Miranda was shielded from liability for conduct that his opponents were punished for. It's a clear instance of selective enforcement and constitutes viewpoint discrimination and undermines any claim that the Election Code was applied neutrally.</p>
+
+  <h3>Case 13: Ramirez v. Yelkovan — Guilty</h3>
+  <p>Complainant Ramirez alleged that Yelkovan violated Section 15(2)(b) and Section 43(k) by appearing as a collaborator on an SJP voting guide — a post that endorsed candidates for the External Affairs VP race.</p>
+
+  <div class="evidence-box">
+    <div class="ev-label">Key Detail</div>
+    <p>The same SJP voting guide listed <strong>both Yelkovan and Miranda</strong> — for first and second ranking of the same race. SJP independently endorsed both candidates. Yelkovan accepted the collaboration invite before any other candidate.</p>
+  </div>
+
+  <p>The commission found Yelkovan guilty. This became Strike 1.</p>
+
+  <h3>Case 25: Dixit v. Miranda — Dismissed</h3>
+  <p>A separate complainant filed Case 25, citing the <strong>exact same code sections</strong> and <strong>the same evidence</strong> used in Case 13.</p>
+
+  <div class="evidence-box" style="border-left:3px solid var(--gold)">
+    <div class="ev-label">Side-by-Side</div>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Case 13</th>
+          <th>Case 25</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Defendant</strong></td>
+          <td>Aydin Yelkovan</td>
+          <td>Ricardo Miranda</td>
+        </tr>
+        <tr>
+          <td><strong>Code Cited</strong></td>
+          <td>Section 15(2)(b), 43(k)</td>
+          <td>Section 15(2)(b), 43(k)</td>
+        </tr>
+        <tr>
+          <td><strong>Evidence</strong></td>
+          <td>SJP voting guide</td>
+          <td>SJP voting guide</td>
+        </tr>
+        <tr>
+          <td><strong>Outcome</strong></td>
+          <td class="guilty">Guilty — Strike 1</td>
+          <td style="color:var(--text-muted)">Dismissed</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="margin-top:12px;margin-bottom:0">Same post. Same code. Same evidence. The <strong>only difference</strong> was who was on trial.</p>
+  </div>
+
+  <h3>Why the Commission Can't Claim Neutrality</h3>
+  <p>In Case 10 (Rieta v. Guzman), the Electoral Commission demonstrated it was willing to proactively enforce the code — commissioners <em>themselves</em> filed grievances against candidates they believed violated rules. Yet when the same conduct applied to Miranda, no commissioner acted. No one filed. No one raised it. The selectivity was a deliberate choice, not an oversight.</p>
+
+  <p>This pattern — convict the challenger, protect the incumbent — is the textbook definition of <strong>viewpoint discrimination</strong>. It destroys any claim that the Election Code was applied neutrally.</p>
+
+  <h2 id="chalking">The Chalking Ban: A Known Constitutional Violation</h2>
+  <p>The chalking issue reveals something arguably worse than selective enforcement: a commission that was <em>told</em> it was violating the Constitution and chose to continue.</p>
+
+  <h3>What Happened</h3>
+  <p>Commissioner Daniel Rieta implemented a restriction on chalking within Marshall College's election regulations. But the rule didn't stay local — the rest of the Electoral Commission adopted and applied it broadly, including to AS-wide candidates. UCSD runs both university-wide and individual college elections, and each college's campaign manager sits on the Electoral Commission. This meant a restriction created by one commissioner for one college was being enforced against candidates across the entire university.</p>
+
+  <p>In Case 10 (Rieta v. Guzman), Rieta personally filed a grievance against a candidate for chalking — treating it as a campaign violation.</p>
+
+  <p>The problem: UCSD already has established policies on chalking. Under the university's own Time, Place, and Manner (TPM) policies, chalking is a recognized form of free expression. Associated Students cannot override or impose additional restrictions beyond what the university allows.</p>
+
+  <h3>The Warning</h3>
+  <p>On April 7, 2026, student Daniel Negrete directly informed Elections Manager Aries Cole that the commission's chalking regulations violated UCSD policy and constitutional protections.</p>
+
+  <div class="quote-block">
+    "Colleges or AS cannot place restrictions on chalking. UCSD's TPM policies already define free speech through chalking, and furthermore, UCSD policy explicitly clarifies that associated students cannot set their own rules."
+    <cite>— Daniel Negrete to Aries Cole, April 7, 2026</cite>
+  </div>
+
+  <h3>The Response</h3>
+
+  <div class="evidence-box" style="border-left:3px solid var(--accent)">
+    <div class="ev-label">Cole's Reply</div>
+    <p style="font-size:1.1em;margin-bottom:0"><em>"Thanks for letting me know, Daniel."</em></p>
+  </div>
+
+  <p>That was it. When Negrete subsequently raised the issue in person and asked Cole to inform the commissioners of their obligation to uphold free speech, the request was dismissed.</p>
+
+  <h3>Why This Matters</h3>
+  <p>This is not a case where officials were unaware of the constitutional problem. Aries Cole — the Elections Manager, the professional staff member responsible for overseeing the integrity of the entire election process — was explicitly told that the commission was violating student free speech rights. The relevant UCSD policies were cited directly. Cole is the person with the authority and responsibility to correct the commissioners. And the response was to acknowledge the message and do nothing.</p>
+
+  <ul>
+    <li>UCSD's Time, Place, and Manner policies already govern chalking on campus</li>
+    <li>UCSD policy explicitly states that Associated Students cannot impose their own restrictions beyond university policy</li>
+    <li>The commission was enforcing rules it did not have the authority to create</li>
+    <li>The professional staff responsible for ensuring compliance was informed and chose inaction</li>
+  </ul>
+
+  <p>A commission that punishes candidates for exercising constitutionally protected expression — and continues doing so after being told it's unconstitutional — is not enforcing rules. It is selectively wielding power against disfavored speech.</p>
+
+  <h2>The Combined Picture</h2>
+  <div class="vote-note">
+    The Election Code was not applied neutrally. Yelkovan was convicted under Section 15(2)(b) for appearing on a voting guide that also listed Miranda — yet Miranda was dismissed when charged under the same section for the same post. Commissioners proactively policed other candidates but not the incumbent. And when the commission was directly warned that its chalking enforcement violated the Constitution, professional staff acknowledged the warning and chose to do nothing. <strong>This is selective enforcement — and it's viewpoint discrimination.</strong>
+  </div>
+
+  <div class="detail-nav" style="margin-top:48px">
+    <a href="case13.html">Case 13 — Strike 1</a>
+    <a href="bias.html">Structural Bias</a>
+    <a href="results.html">Vote Results</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  All information sourced from official ASUCSD records, case files, and public documents.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

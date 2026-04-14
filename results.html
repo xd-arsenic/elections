@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vote Results & RCV Analysis | UCSD 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="site-nav" id="nav">
+  <a href="index.html" class="nav-logo">CASE FILE: <span>UCSD 2026</span></a>
+  <div class="nav-links">
+    <a href="index.html">Overview</a>
+    <div class="nav-dropdown" id="caseDropdown">
+      <button class="nav-dropdown-trigger" onclick="this.parentElement.classList.toggle('open')">
+        Case Files
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="case13.html">Case 13 — Strike 1</a>
+        <a href="case24.html">Case 24 — Strike 2</a>
+        <a href="case27.html">Case 27 — Strike 3</a>
+        <div class="menu-divider"></div>
+        <a href="enforcement.html">Selective Enforcement</a>
+        <a href="bias.html">Structural Bias</a>
+        <a href="results.html">Vote Analysis</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="detail-hero">
+  <a href="index.html" class="back-link">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Back to case board
+  </a>
+  <div class="strike-badge info">Analysis</div>
+  <h1 class="section-title" style="margin-bottom:8px">The Vote: From 27% to 100%</h1>
+  <p class="section-desc" style="margin:0 auto;text-align:center;max-width:560px">How ranked-choice voting was weaponized through post-hoc disqualification to override the will of over 72% of voters.</p>
+  <div class="detail-nav" style="margin-top:20px">
+    <a href="case13.html">Case 13</a>
+    <a href="case24.html">Case 24</a>
+    <a href="case27.html">Case 27</a>
+    <a href="bias.html">Bias</a>
+    <a href="results.html" class="active">Results</a>
+  </div>
+</section>
+
+<div class="detail-body">
+
+  <h2>Round 1: What Voters Actually Chose</h2>
+  <p>5,513 students cast ballots for Executive Vice President of External Affairs. The first-round results:</p>
+
+  <div class="vote-bars">
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Kaleb Truchan</span><span class="pct">37.95% &middot; 2,092</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill truchan" data-width="37.95"></div></div>
+    </div>
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Aydin Yelkovan</span><span class="pct">34.32% &middot; 1,892</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill yelkovan" data-width="34.32"></div></div>
+    </div>
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Ricardo Miranda</span><span class="pct">27.73% &middot; 1,529</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill miranda" data-width="27.73"></div></div>
+    </div>
+  </div>
+
+  <p style="margin-top:24px"><strong>Miranda came in last place.</strong> In a normal ranked-choice election, the last-place candidate is eliminated first, and their votes are redistributed. Instead, the two candidates ahead of Miranda were both disqualified.</p>
+
+  <h2>The Post-Hoc Timing</h2>
+  <p>This is the critical detail: both disqualifications were announced <strong>after the voting period had already closed</strong>.</p>
+
+  <div class="evidence-box">
+    <div class="ev-label">Timeline</div>
+    <p><strong>Voting period:</strong> April 6, 10:00 AM — April 10, 4:00 PM</p>
+    <p><strong>Case 27 hearing (disqualifying strike):</strong> April 10, during/after voting</p>
+    <p><strong>Disqualification announced:</strong> After polls closed</p>
+    <p style="margin-bottom:0">Over 5,500 students voted without any knowledge that their preferred candidates would be removed. They had no opportunity to reconsider their ballots.</p>
+  </div>
+
+  <h2>Round 2: The Transfer</h2>
+  <p>After disqualification, here's how the votes were transferred according to the official tabulation:</p>
+
+  <div class="evidence-box">
+    <div class="ev-label">Truchan's 2,092 ballots</div>
+    <p>846 transferred to Miranda (ranked 2nd)</p>
+    <p>1,049 transferred to Miranda (ranked 3rd)</p>
+    <p>197 exhausted (did not rank Miranda)</p>
+  </div>
+
+  <div class="evidence-box">
+    <div class="ev-label">Yelkovan's 1,892 ballots</div>
+    <p>822 transferred to Miranda (ranked 2nd)</p>
+    <p>968 transferred to Miranda (ranked 3rd)</p>
+    <p>102 exhausted (did not rank Miranda)</p>
+  </div>
+
+  <h2>The Final Tally</h2>
+
+  <div class="vote-bars" style="margin-top:16px">
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Kaleb Truchan</span><span class="pct" style="color:var(--accent-light)">DISQUALIFIED</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill disqualified" data-width="37.95"></div></div>
+    </div>
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Aydin Yelkovan</span><span class="pct" style="color:var(--accent-light)">DISQUALIFIED</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill disqualified" data-width="34.32"></div></div>
+    </div>
+    <div class="vote-bar-group">
+      <div class="vote-bar-label"><span>Ricardo Miranda</span><span class="pct" style="color:var(--gold)">100% &middot; 5,214</span></div>
+      <div class="vote-bar-track"><div class="vote-bar-fill miranda" data-width="100"></div></div>
+    </div>
+  </div>
+
+  <p style="margin-top:24px">Miranda went from 1,529 votes (27.73%) to 5,214 votes (100%). He received not only the votes of people who ranked him second, but also those who ranked him <strong>third</strong> — and the tabulation treated all transfers identically.</p>
+
+  <h2>The RCV Problem</h2>
+  <p>Standard ranked-choice voting works by eliminating candidates one at a time, starting with the last-place finisher. Voters' ballots then transfer to their next-ranked choice. This process repeats until one candidate achieves 50% + 1.</p>
+
+  <p>That's not what happened here.</p>
+
+  <h3>What Should Have Happened</h3>
+  <p>Even accepting the disqualifications as valid (which is disputed), the RCV process was misapplied:</p>
+
+  <ul>
+    <li><strong>Normal RCV:</strong> The last-place candidate is eliminated. Their votes transfer. Repeat until someone reaches 50% + 1.</li>
+    <li><strong>Disqualification RCV:</strong> Both non-Miranda candidates were simultaneously removed. ALL their ballots — including those ranking Miranda third or not ranking him at all — were funneled into Miranda's total. The 299 exhausted ballots (voters who deliberately chose not to rank Miranda) were simply discarded.</li>
+  </ul>
+
+  <h3>The 50% + 1 Requirement &amp; Robert's Rules</h3>
+  <p>The Elections Code requires a candidate to achieve 50% + 1 to win. But under <strong>Robert's Rules of Order</strong> — which the Judicial Board itself upheld as the governing parliamentary standard for ASUCSD elections in a 2014 grievance case — votes cast for disqualified candidates are <strong>voided but still count toward the total</strong> when calculating whether a majority has been reached.</p>
+
+  <div class="evidence-box">
+    <div class="ev-label">The Math</div>
+    <p><strong>Total ballots cast:</strong> 5,513</p>
+    <p><strong>Majority threshold (50% + 1):</strong> 2,757</p>
+    <p><strong>Miranda's first-choice votes:</strong> 1,529 (27.73%)</p>
+    <p><strong>Miranda's "final" tally after transfers:</strong> 5,214</p>
+    <p style="margin-bottom:0">But 3,984 of those votes came from disqualified candidates. Under Robert's Rules, those ballots are voided — they cannot transfer to another candidate. They still count toward the total of 5,513, meaning Miranda needed 2,757 to win. He had 1,529. <strong>He never reached a majority.</strong></p>
+  </div>
+
+  <p>In a normal election, Miranda — as the last-place finisher — would have been eliminated first. His ballots would have been redistributed to Truchan and Yelkovan. The question of whether Miranda could ever reach 50% + 1 would never have arisen.</p>
+
+  <h2>For Comparison</h2>
+  <p>In the same election, the Essential Needs VP race used standard RCV:</p>
+
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>Race</th>
+        <th>Round 1 Leader</th>
+        <th>Winner</th>
+        <th>Method</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Essential Needs VP</td>
+        <td>Camila Gutierrez (43.3%)</td>
+        <td>Camila Gutierrez (56.5%)</td>
+        <td>Standard RCV — last place eliminated, votes transfer normally</td>
+      </tr>
+      <tr>
+        <td>External Affairs VP</td>
+        <td>Kaleb Truchan (38.0%)</td>
+        <td class="guilty">Ricardo Miranda (100%)</td>
+        <td>Both opponents disqualified post-hoc — all votes transferred to last-place finisher</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>In one race, the first-round leader won through legitimate vote transfer. In the other, the last-place finisher won through administrative disqualification of every opponent.</p>
+
+  <h2>The Bottom Line</h2>
+
+  <div class="vote-note">
+    <strong>72.27% of voters</strong> chose someone other than Miranda as their first choice. Both Yelkovan and Truchan were disqualified on speech-based grounds, announced only after voting closed. Their votes were transferred to give the last-place incumbent a reported 100% — but under Robert's Rules of Order, the standard the Judicial Board itself upheld in a 2014 case, voided ballots still count toward the total. Miranda received 1,529 of 5,513 votes. He needed 2,757 for a majority. <strong>He never got there.</strong>
+  </div>
+
+  <div class="detail-nav" style="margin-top:48px">
+    <a href="bias.html">Prev: Structural Bias</a>
+    <a href="index.html">Back to Overview</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  All information sourced from official ASUCSD records, case files, and public documents.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

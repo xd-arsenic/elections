@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Case File: UCSD 2026 — An Election Investigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav" id="nav">
+  <a href="index.html" class="nav-logo">CASE FILE: <span>UCSD 2026</span></a>
+  <div class="nav-links">
+    <a href="#evidence">Evidence</a>
+    <a href="#connections">Connections</a>
+    <a href="#results">Results</a>
+    <div class="nav-dropdown" id="caseDropdown">
+      <button class="nav-dropdown-trigger" onclick="this.parentElement.classList.toggle('open')">
+        Case Files
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="nav-dropdown-menu">
+        <a href="case13.html">Case 13 — Strike 1</a>
+        <a href="case24.html">Case 24 — Strike 2</a>
+        <a href="case27.html">Case 27 — Strike 3</a>
+        <div class="menu-divider"></div>
+        <a href="enforcement.html">Selective Enforcement</a>
+        <a href="bias.html">Structural Bias</a>
+        <a href="results.html">Vote Analysis</a>
+      </div>
+    </div>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">Active Investigation</div>
+  <h1>The Case of the <span class="highlight">Silenced Candidate</span></h1>
+  <p class="hero-sub">Two candidates disqualified on free speech grounds. One last-place incumbent declared winner with 27% of the vote — without ever reaching the required majority. An interactive case file.</p>
+
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num" data-count="2">0</div>
+      <div class="label">Candidates Disqualified</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num" data-count="3">0</div>
+      <div class="label">Strikes on Speech</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num" data-count="72">0</div>
+      <div class="label">% of Voters Overruled</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num" data-count="27" data-suffix="%">0</div>
+      <div class="label">Winner's Actual Vote</div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">
+    Open the case file
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- THE PLAYERS -->
+<section class="section" id="players">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">// Subjects</div>
+      <div class="section-title">The Players</div>
+      <p class="section-desc">Spring 2026. Three candidates run for Executive Vice President of External Affairs at UC San Diego. Only one will remain — and it's the one who came in last.</p>
+    </div>
+
+    <div class="context-grid">
+      <div class="context-card fade-in">
+        <h4>Aydin Yelkovan</h4>
+        <p>Candidate for EVP External Affairs. Received <strong style="color:var(--accent-light)">34.32%</strong> of first-round votes — second place. Disqualified via three strikes, all based on speech-related conduct. Now seeking legal counsel for First Amendment violations.</p>
+      </div>
+      <div class="context-card type-incumbent fade-in">
+        <h4>Ricardo Miranda</h4>
+        <p>Incumbent VP of External Affairs. Received <strong style="color:var(--gold)">27.73%</strong> of first-round votes — dead last. After both opponents were disqualified post-vote, was awarded <strong style="color:var(--gold)">100%</strong> of the final tally.</p>
+      </div>
+      <div class="context-card type-other fade-in">
+        <h4>Kaleb Truchan</h4>
+        <p>Third candidate. Received <strong style="color:var(--blue-light)">37.95%</strong> — first place in round one. Also disqualified, clearing the path entirely for the incumbent.</p>
+      </div>
+    </div>
+
+    <div class="accordion" style="margin-top:20px">
+      <div class="acc-item fade-in">
+        <button class="acc-trigger">
+          Why does the First Amendment apply to student government?
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>ASUCSD is not independent — it exists as a University department within the Office of Student Affairs. As part of a public university, it must uphold constitutional rights. Established in <em>Koala v. Khosla</em> (9th Cir. 2019), <em>Rosenberger v. Rector</em> (1995), and others.</p>
+            <p style="margin-top:8px">UC Regents Policy 3303: <em>"No UC student shall be subject to disciplinary sanctions solely on the basis of speech protected from governmental restriction under the First Amendment."</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="acc-item fade-in">
+        <button class="acc-trigger">
+          What is the "civility" clause — Section 44(a)?
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="acc-body">
+          <div class="acc-body-inner">
+            <p>Section 44(a) requires candidates to <em>"campaign in a civil, decent, and respectful manner."</em> Two of three strikes used this clause. In <em>College Republicans at SF State v. Reed</em> (2007), a federal court struck down an identical "civility" rule as unconstitutionally vague — because "civility" is subjective and gives officials unchecked power.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVIDENCE TIMELINE -->
+<section class="section cork-bg" id="evidence" style="border-top:1px solid var(--border)">
+  <div class="container" style="position:relative;z-index:1">
+    <div class="fade-in">
+      <div class="section-label">// Evidence Board</div>
+      <div class="section-title">The Case Files</div>
+      <p class="section-desc">Pinned to the board: every case, every ruling, every contradiction. Follow the red string — see how each piece connects to the next.</p>
+    </div>
+
+    <div class="timeline">
+
+      <!-- CASE 13 -->
+      <div class="tl-item">
+        <div class="tl-dot red"></div>
+        <div class="tl-date">April 3, 2026</div>
+        <div class="evidence-file" style="--rot:-0.5deg">
+          <div class="pin"></div>
+          <div class="stamp">Strike 1</div>
+          <div class="file-num">Case No. 13 — Ramirez v. Yelkovan et al.</div>
+          <h3>The Endorsement Post</h3>
+          <p>Yelkovan appeared as a collaborator on an SJP voting guide — an endorsement post that <strong>also listed his opponent Miranda</strong>. Found guilty of "coordinating" under Section 15(2)(b). The commission then <strong>dismissed identical charges</strong> against Miranda in Case 25.</p>
+          <span class="tag tag-strike">Strike 1</span>
+          <a href="case13.html" class="file-link">
+            Open case file
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CHALKING -->
+      <div class="tl-item">
+        <div class="tl-dot blue"></div>
+        <div class="tl-date">April 3–7, 2026</div>
+        <div class="evidence-file" style="--rot:0.4deg">
+          <div class="pin"></div>
+          <div class="file-num">Case No. 10 — Rieta v. Guzman</div>
+          <h3>The Chalking Ban</h3>
+          <p>A commissioner personally filed a grievance against a candidate for chalking — despite UCSD policy explicitly allowing it. When informed of its unconstitutionality, Elections Manager Aries Cole dismissed the warning with "Thanks for letting me know." The commission knew it was violating free speech and chose to continue.</p>
+          <span class="tag tag-speech">Known Violation</span>
+          <a href="enforcement.html#chalking" class="file-link">
+            Full analysis
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CASE 25 -->
+      <div class="tl-item">
+        <div class="tl-dot gold"></div>
+        <div class="tl-date">Dismissed</div>
+        <div class="evidence-file" style="--rot:-0.3deg">
+          <div class="pin"></div>
+          <div class="stamp">Dismissed</div>
+          <div class="file-num">Case No. 25 — Dixit v. Miranda</div>
+          <h3>Same Evidence. Same Code. Different Defendant.</h3>
+          <p>Filed citing the same evidence and code sections that convicted Yelkovan in Case 13. The only difference was the defendant: <strong>Miranda</strong>. The commission dismissed it. One set of rules for the challenger, another for the incumbent.</p>
+          <span class="tag tag-bias">Selective Enforcement</span>
+          <a href="enforcement.html" class="file-link">
+            Full analysis
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CASE 24 -->
+      <div class="tl-item">
+        <div class="tl-dot red"></div>
+        <div class="tl-date">April 9–10, 2026</div>
+        <div class="evidence-file" style="--rot:0.6deg">
+          <div class="pin"></div>
+          <div class="stamp">Strike 2</div>
+          <div class="file-num">Case No. 24 — Coryea v. Yelkovan</div>
+          <h3>The "Unclear" Endorsement</h3>
+          <p>An Instagram story showed two candidates with logos separated by "x" — a standard social media convention. The Judicial Board's own opinion admitted the meaning was <span class="redacted" title="Click to reveal">"unclear whether it truly is"</span> an endorsement — yet convicted under the vague 44(a) "civility" clause. The appeal was presided over by a close friend of Miranda.</p>
+          <span class="tag tag-strike">Strike 2</span>
+          <a href="case24.html" class="file-link">
+            Open case file
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- CASE 22 -->
+      <div class="tl-item">
+        <div class="tl-dot gold"></div>
+        <div class="tl-date">Withdrawn Before Hearing</div>
+        <div class="evidence-file" style="--rot:-0.4deg">
+          <div class="pin"></div>
+          <div class="stamp">Staged</div>
+          <div class="file-num">Case No. 22 — Derby v. Miranda</div>
+          <h3>The Cover Story</h3>
+          <p>Jack Derby filed against Miranda for late finance reports — information only obtainable because Miranda personally handed them over. The case was withdrawn moments before the hearing. A staged filing to create a paper trail of "impartiality."</p>
+          <span class="tag tag-bias">Coordinated Lawfare</span>
+        </div>
+      </div>
+
+      <!-- CASE 27 -->
+      <div class="tl-item">
+        <div class="tl-dot red"></div>
+        <div class="tl-date">April 10, 2026</div>
+        <div class="evidence-file" style="--rot:0.3deg;border:2px solid rgba(198,40,40,.3)">
+          <div class="pin"></div>
+          <div class="stamp">Disqualified</div>
+          <div class="file-num">Case No. 27 — Derby v. Yelkovan et al.</div>
+          <h3>The Impossible Bind</h3>
+          <p>Yelkovan was held responsible for comments made by a <strong>disability justice organization</strong> on their own Instagram, about a <strong>completely different race</strong>. The Election Code prohibited him from controlling the organization's speech — yet punished him for not doing so. Guilty 7-0. Appeal denied. Disqualified.</p>
+          <div class="quote-block">
+            "@minaforucsd Please stop auditioning for a role you refused to play as VP. You weren't there for the Resource Hub or the Minor, yet you talk about 'community' now."
+            <cite>— Blind Snakes Co-Op (disability advocacy org), commenting on a different race</cite>
+          </div>
+          <span class="tag tag-strike">Strike 3 — Disqualification</span>
+          <a href="case27.html" class="file-link">
+            Open case file
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- DISQUALIFICATION -->
+      <div class="tl-item">
+        <div class="tl-dot black"></div>
+        <div class="tl-date">April 10, 2026 — After Voting Closed</div>
+        <div class="evidence-file" style="--rot:-0.2deg;background:var(--bg-paper-dark)">
+          <div class="pin"></div>
+          <div class="file-num">Final Action</div>
+          <h3>Post-Hoc Disqualification</h3>
+          <p>Both Yelkovan and Truchan were disqualified <strong>after voting had already closed</strong>. Over 5,500 students had already cast their ballots with no way to reconsider. Miranda, with 27% of the vote, was declared winner with 100%.</p>
+          <span class="tag tag-strike">Post-Hoc</span>
+          <a href="results.html" class="file-link">
+            See the vote math
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONNECTIONS -->
+<section class="section" id="connections" style="border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">// Red String</div>
+      <div class="section-title">Follow the Connections</div>
+      <p class="section-desc">This wasn't a series of isolated decisions. It was enabled by overlapping conflicts of interest and selective rule application. Here's who connects to who — and how.</p>
+    </div>
+
+    <div class="network-wrap fade-in">
+      <h4>Persons of Interest</h4>
+      <div class="network-nodes">
+        <div class="network-node complainant">Jack Derby</div>
+        <div class="network-node complainant">Ryan Coryea</div>
+        <div class="network-node official">Jesse Wu</div>
+        <div class="network-node official">Sofia Early</div>
+        <div class="network-node official">Aries Cole</div>
+        <div class="network-node defendant">Aydin Yelkovan</div>
+        <div class="network-node defendant">Kaleb Truchan</div>
+      </div>
+      <ul class="network-links">
+        <li><strong>Jack Derby</strong> filed multiple grievances targeting Yelkovan/Truchan almost exclusively. Filed the disqualifying Case 27. Staged a case against Miranda (Case 22) using info Miranda personally provided, then withdrew it.</li>
+        <li><strong>Ryan Coryea</strong> filed Case 24 (Strike 2) using the vague "civility" clause, arguing both that a post was an endorsement AND that it wasn't — hedging to ensure a conviction either way.</li>
+        <li><strong>Jesse Wu</strong> sat on hiring committees for both the Electoral Commission and Judicial Board, then was appointed as a commissioner. He influenced who heard cases at every level.</li>
+        <li><strong>Sofia Early</strong> — J-Board Chair, close friend of Miranda. Presided over the Case 24 appeal despite claiming recusal. Was recorded as "abstaining" instead of being excluded from the vote count.</li>
+        <li><strong>Aries Cole</strong> — Elections Manager. Was directly informed that the commission was violating free speech and dismissed the warning.</li>
+      </ul>
+    </div>
+
+    <div class="connection-grid" style="margin-top:24px">
+      <div class="conn-card fade-in">
+        <h4>The Catch-22 of Case 27</h4>
+        <p>Section 43K(1) bans candidates from controlling endorsing orgs' speech. But the endorsement agreement held Yelkovan liable for that speech. He was punished for not doing something he was legally barred from doing.</p>
+      </div>
+      <div class="conn-card type-bias fade-in">
+        <h4>Mirror Cases, Opposite Verdicts</h4>
+        <p>Case 13 convicted Yelkovan. Case 25 — same code, same evidence, same post — dismissed charges against Miranda. The only variable: who was on trial.</p>
+      </div>
+      <div class="conn-card type-speech fade-in">
+        <h4>44(a): One Clause, Infinite Meanings</h4>
+        <p>The "civility" clause was stretched to cover anything — a social media "x" symbol, a disability org's advocacy comments. Federal courts call this void-for-vagueness.</p>
+      </div>
+      <div class="conn-card fade-in">
+        <h4>The Appeal That Wasn't</h4>
+        <p>The J-Board's Case 27 denial was signed "AS Elections Board" — the body that prosecuted the case. A "mistype" that revealed the lack of institutional separation.</p>
+      </div>
+    </div>
+
+    <a href="bias.html" class="file-link fade-in" style="margin-top:24px;display:inline-flex">
+      Full analysis: Structural bias &amp; conflicts
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="section" id="results" style="border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">// The Numbers</div>
+      <div class="section-title">From 27% to 100%</div>
+      <p class="section-desc">The math of how ranked-choice voting was weaponized through post-hoc disqualification to override the will of over 72% of voters.</p>
+    </div>
+
+    <div class="vote-bars fade-in">
+      <div class="round-label">Round 1 — What Voters Chose</div>
+
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Kaleb Truchan</span><span class="pct">37.95% &middot; 2,092 votes</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill truchan" data-width="37.95"></div></div>
+      </div>
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Aydin Yelkovan</span><span class="pct">34.32% &middot; 1,892 votes</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill yelkovan" data-width="34.32"></div></div>
+      </div>
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Ricardo Miranda</span><span class="pct">27.73% &middot; 1,529 votes</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill miranda" data-width="27.73"></div></div>
+      </div>
+
+      <div class="round-label">Round 2 — After Disqualifications</div>
+
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Kaleb Truchan</span><span class="pct" style="color:var(--accent-light)">DISQUALIFIED</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill disqualified" data-width="37.95"></div></div>
+      </div>
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Aydin Yelkovan</span><span class="pct" style="color:var(--accent-light)">DISQUALIFIED</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill disqualified" data-width="34.32"></div></div>
+      </div>
+      <div class="vote-bar-group">
+        <div class="vote-bar-label"><span>Ricardo Miranda</span><span class="pct" style="color:var(--gold)">100% &middot; 5,214 votes</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill miranda" data-width="100"></div></div>
+      </div>
+    </div>
+
+    <div class="vote-note fade-in">
+      <strong>He never reached a majority.</strong> Under Robert's Rules of Order — which the Judicial Board itself upheld as the governing standard for ASUCSD elections in a 2014 grievance case — votes cast for disqualified candidates are voided but still count toward the total when calculating whether a majority (50% + 1) has been reached. Miranda received 1,529 first-choice votes out of 5,513 total ballots cast. That's 27.73% — far short of the required majority. Disqualification doesn't erase the ballots; it voids the candidacies. The threshold stays the same.
+    </div>
+
+    <a href="results.html" class="file-link fade-in" style="margin-top:20px;display:inline-flex">
+      Full vote analysis
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- THE PLAYBOOK -->
+<section class="section" style="border-top:1px solid var(--border)">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">// Pattern Analysis</div>
+      <div class="section-title">The Playbook</div>
+      <p class="section-desc">Step back, and a five-step pattern emerges. Not legitimate enforcement — coordinated suppression.</p>
+    </div>
+
+    <div class="key-point fade-in">
+      <div class="kp-num red">1</div>
+      <div class="kp-body">
+        <h4>File Relentlessly</h4>
+        <p>A small circle of students associated with Miranda filed a disproportionate share of all complaints, targeting Yelkovan and Truchan almost exclusively.</p>
+      </div>
+    </div>
+    <div class="key-point fade-in">
+      <div class="kp-num red">2</div>
+      <div class="kp-body">
+        <h4>Exploit Vague Rules</h4>
+        <p>Stretch Section 44(a)'s subjective "civility" mandate to cover anything — social media conventions, a disability org's advocacy. The clause is so broad it means whatever officials want it to mean.</p>
+      </div>
+    </div>
+    <div class="key-point fade-in">
+      <div class="kp-num gold">3</div>
+      <div class="kp-body">
+        <h4>Stack the Institutions</h4>
+        <p>Jesse Wu sat on hiring committees for both the Electoral Commission and Judicial Board, then served as a commissioner. Sofia Early presided over an appeal despite being Miranda's close friend.</p>
+      </div>
+    </div>
+    <div class="key-point fade-in">
+      <div class="kp-num gold">4</div>
+      <div class="kp-body">
+        <h4>Shield the Incumbent</h4>
+        <p>Dismiss identical charges against Miranda (Case 25). Stage a complaint (Case 22) then withdraw it to create the appearance of fairness.</p>
+      </div>
+    </div>
+    <div class="key-point fade-in">
+      <div class="kp-num blue">5</div>
+      <div class="kp-body">
+        <h4>Disqualify After Voting</h4>
+        <p>Wait until polls close. Announce disqualifications. Transfer all votes to the last-place incumbent. Declare victory at 100%.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="container fade-in">
+    <div class="stamp-block">Case Open</div>
+    <h2>This Shouldn't Happen at a Public University</h2>
+    <p>Every document, case file, and email referenced here comes directly from ASUCSD's own records. Tap any case to read the full evidence.</p>
+    <div class="detail-nav">
+      <a href="case13.html">Case 13</a>
+      <a href="case24.html">Case 24</a>
+      <a href="case27.html">Case 27</a>
+      <a href="enforcement.html">Enforcement</a>
+      <a href="bias.html">Bias</a>
+      <a href="results.html">Results</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  All information sourced from official ASUCSD records, case files, and public documents.
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
