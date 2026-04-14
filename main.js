@@ -17,11 +17,17 @@ const counterObserver = new IntersectionObserver((entries) => {
       const el = entry.target;
       const target = parseInt(el.dataset.count, 10);
       const suffix = el.dataset.suffix || '';
+      const holdMs = 800;
       const duration = 1600;
-      const start = performance.now();
+      const animStart = performance.now() + holdMs;
 
       function tick(now) {
-        const elapsed = now - start;
+        if (now < animStart) {
+          el.textContent = '0' + suffix;
+          requestAnimationFrame(tick);
+          return;
+        }
+        const elapsed = now - animStart;
         const progress = Math.min(elapsed / duration, 1);
         // ease-out cubic
         const eased = 1 - Math.pow(1 - progress, 3);
