@@ -1,0 +1,13 @@
+{
+  "name": "elections-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "capture": "node scripts/capture-media.mjs",
+    "capture:slides": "SLIDES_ONLY=1 node scripts/capture-media.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "playwright": "^1.49.1"
+  }
+}

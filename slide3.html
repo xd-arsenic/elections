@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    background: #1a1210; font-family: 'Inter', sans-serif; color: #e8e0d6; position: relative;
+  }
+  body::after {
+    content:''; position:absolute; inset:0;
+    background: repeating-conic-gradient(rgba(255,255,255,.015) 0% 25%, transparent 0% 50%) 0 0/4px 4px;
+    pointer-events:none;
+  }
+  .top-line { position:absolute; top:0; left:0; right:0; height:4px; background:transparent; z-index:20; }
+  .corner { position:absolute; width:36px; height:36px; border-color:rgba(198,40,40,.22); border-style:solid; z-index:20; }
+  .corner.tl { top:18px; left:18px; border-width:3px 0 0 3px; }
+  .corner.tr { top:18px; right:18px; border-width:3px 3px 0 0; }
+  .corner.bl { bottom:18px; left:18px; border-width:0 0 3px 3px; }
+  .corner.br { bottom:18px; right:18px; border-width:0 3px 3px 0; }
+
+  .layout {
+    height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding:56px 56px 72px; text-align:center; position:relative; z-index:2;
+  }
+
+  .label {
+    font-family:'JetBrains Mono',monospace; font-size:18px; letter-spacing:4px;
+    text-transform:uppercase; color:#6b5e52; margin-bottom:20px;
+  }
+
+  h1 {
+    font-family:'Special Elite',cursive; font-size:102px; line-height:1.08;
+    color:#f5f0eb; margin-bottom:44px;
+  }
+  h1 .red { color:#c62828; }
+
+  .math {
+    width:100%; max-width:860px;
+  }
+
+  .math-row {
+    display:flex; justify-content:space-between; align-items:baseline;
+    padding:24px 0;
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+
+  .math-row:last-child { border-bottom:none; }
+
+  .math-label {
+    font-size:34px; color:#8a7d72; text-align:left;
+  }
+
+  .math-val {
+    font-family:'JetBrains Mono',monospace; font-size:42px; color:#f5f0eb;
+    text-align:right;
+  }
+
+  .math-val.red { color:#c62828; font-size:50px; font-weight:700; }
+  .math-val.gold { color:#c9a96e; }
+
+  .math-row.highlight {
+    background:rgba(198,40,40,.06);
+    border:1px solid rgba(198,40,40,.2);
+    border-radius:6px;
+    padding:28px 24px;
+    margin-top:14px;
+  }
+
+  .math-row.highlight .math-label {
+    color:#f5f0eb; font-weight:700;
+  }
+
+  .verdict {
+    margin-top:40px;
+    padding-top:32px;
+    border-top:2px solid rgba(198,40,40,.2);
+    max-width:860px;
+  }
+
+  .verdict-highlight {
+    background:rgba(201,169,110,.18);
+    border:1px solid rgba(201,169,110,.45);
+    border-radius:8px;
+    padding:32px 36px;
+    text-align:center;
+  }
+
+  .verdict-highlight p {
+    font-family:'Special Elite',cursive;
+    font-size:54px;
+    color:#f5f0eb;
+    line-height:1.28;
+  }
+
+  .verdict-highlight p + p {
+    margin-top:14px;
+  }
+
+  .verdict .source {
+    display:block;
+    font-family:'Inter',sans-serif;
+    font-size:23px;
+    color:#6b5e52;
+    margin-top:24px;
+    font-style:italic;
+  }
+
+  .page-num { position:absolute; bottom:36px; left:44px; font-family:'JetBrains Mono',monospace; font-size:19px; color:#4a3f35; z-index:20; }
+  .swipe { position:absolute; bottom:36px; right:44px; font-family:'JetBrains Mono',monospace; font-size:19px; color:#6b5e52; display:flex; align-items:center; gap:10px; z-index:20; letter-spacing:2px; }
+</style>
+</head>
+<body>
+<div class="top-line"></div>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="layout">
+  <div class="label">// The math</div>
+  <h1>He got 27%.<br>He needed <span class="red">50% + 1.</span></h1>
+
+  <div class="math">
+    <div class="math-row">
+      <div class="math-label">Total ballots cast</div>
+      <div class="math-val">5,513</div>
+    </div>
+    <div class="math-row">
+      <div class="math-label">Majority threshold</div>
+      <div class="math-val gold">2,757</div>
+    </div>
+    <div class="math-row highlight">
+      <div class="math-label">Miranda's first-choice votes</div>
+      <div class="math-val red">1,529</div>
+    </div>
+  </div>
+
+  <div class="verdict">
+    <div class="verdict-highlight">
+      <p>He never reached a majority.</p>
+      <p>He is not the legitimate winner.</p>
+    </div>
+    <span class="source">Under Robert's Rules of Order &mdash; which the J-Board itself upheld as the governing standard for ASUCSD elections.</span>
+  </div>
+</div>
+
+<div class="page-num">03 / 04</div>
+<div class="swipe">SWIPE <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+</body>
+</html>

@@ -17,8 +17,8 @@ const counterObserver = new IntersectionObserver((entries) => {
       const el = entry.target;
       const target = parseInt(el.dataset.count, 10);
       const suffix = el.dataset.suffix || '';
-      const holdMs = 800;
-      const duration = 1600;
+      const holdMs = 1040;
+      const duration = 2080;
       const animStart = performance.now() + holdMs;
 
       function tick(now) {

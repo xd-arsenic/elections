@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    width: 1080px; height: 1350px; overflow: hidden;
+    background: #1a1210; font-family: 'Inter', sans-serif; color: #e8e0d6; position: relative;
+  }
+  body::after {
+    content:''; position:absolute; inset:0;
+    background: repeating-conic-gradient(rgba(255,255,255,.015) 0% 25%, transparent 0% 50%) 0 0/4px 4px;
+    pointer-events:none;
+  }
+  .corner { position:absolute; width:36px; height:36px; border-color:rgba(198,40,40,.22); border-style:solid; z-index:20; }
+  .corner.tl { top:18px; left:18px; border-width:3px 0 0 3px; }
+  .corner.tr { top:18px; right:18px; border-width:3px 3px 0 0; }
+  .corner.bl { bottom:18px; left:18px; border-width:0 0 3px 3px; }
+  .corner.br { bottom:18px; right:18px; border-width:0 3px 3px 0; }
+
+  .layout {
+    height:100%; display:flex; flex-direction:column; justify-content:center;
+    padding:48px 56px 72px; position:relative; z-index:2; gap:18px;
+  }
+
+  .top-label {
+    font-family:'JetBrains Mono',monospace; font-size:20px; letter-spacing:5px;
+    text-transform:uppercase; color:#6b5e52; margin-bottom:8px;
+  }
+  .top-title {
+    font-family:'Special Elite',cursive; font-size:60px; line-height:1.1;
+    color:#f5f0eb; margin-bottom:8px;
+  }
+
+  .bar { margin-bottom:12px; }
+  .bar:last-of-type { margin-bottom:0; }
+  .bar-info {
+    display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;
+  }
+  .bar-name {
+    font-weight:800; font-size:34px; color:#f5f0eb;
+  }
+  .bar-pct {
+    font-family:'JetBrains Mono',monospace; font-size:30px; color:#a09585;
+  }
+  .bar-track {
+    width:100%; height:40px; background:rgba(255,255,255,.04); border-radius:4px; overflow:hidden;
+  }
+  .bar-fill { height:100%; border-radius:4px; }
+  .fill-blue { background:#5c7ab8; width:37.95%; }
+  .fill-red { background:#c62828; width:34.32%; }
+  .fill-gold { background:#c9a96e; width:27.73%; }
+
+  .erased {
+    margin:16px 0;
+    padding:56px 40px 60px;
+    min-height:360px;
+    border-top:3px solid rgba(198,40,40,.28);
+    border-bottom:3px solid rgba(198,40,40,.28);
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:rgba(198,40,40,.04);
+  }
+  .erased-title {
+    font-family:'Special Elite',cursive; font-size:102px; line-height:1.02;
+    color:#c62828;
+    margin-bottom:22px;
+  }
+  .erased-sub {
+    font-size:32px; color:#c4b8a8; line-height:1.45;
+    font-weight:500;
+    max-width:920px;
+  }
+  .erased-sub strong { color:#f5f0eb; }
+
+  .result-wrap {
+    background:rgba(255,255,255,.03);
+    border:1px solid rgba(255,255,255,.1);
+    padding:26px 28px;
+    position:relative;
+    overflow:hidden;
+    transform:skewY(-0.3deg);
+  }
+  .result-wrap::before {
+    content:'';
+    position:absolute; inset:0;
+    background:repeating-linear-gradient(
+      -45deg,
+      rgba(232,224,214,.07),
+      rgba(232,224,214,.07) 1px,
+      transparent 1px,
+      transparent 11px
+    );
+    pointer-events:none;
+  }
+  .result-label {
+    font-family:'JetBrains Mono',monospace; font-size:18px; letter-spacing:4px;
+    text-transform:uppercase; color:#6b5e52; margin-bottom:14px;
+  }
+  .result-bar .bar-name { color:#c9a96e; }
+  .result-bar .bar-pct { color:#c9a96e; font-size:38px; font-weight:800; }
+  .fill-gold-full { background:linear-gradient(90deg, #c9a96e, #a08040); width:100%; }
+
+  .page-num { position:absolute; bottom:36px; left:44px; font-family:'JetBrains Mono',monospace; font-size:19px; color:#4a3f35; z-index:20; }
+  .swipe { position:absolute; bottom:36px; right:44px; font-family:'JetBrains Mono',monospace; font-size:19px; color:#6b5e52; display:flex; align-items:center; gap:10px; z-index:20; letter-spacing:2px; }
+</style>
+</head>
+<body>
+<div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+
+<div class="layout">
+
+  <div>
+    <div class="top-label">What students voted</div>
+    <div class="top-title">First-choice results</div>
+    <br><br>
+
+    <div class="bar">
+      <div class="bar-info"><span class="bar-name">Truchan</span><span class="bar-pct">37.95%</span></div>
+      <div class="bar-track"><div class="bar-fill fill-blue"></div></div>
+    </div>
+    <div class="bar">
+      <div class="bar-info"><span class="bar-name">Yelkovan</span><span class="bar-pct">34.32%</span></div>
+      <div class="bar-track"><div class="bar-fill fill-red"></div></div>
+    </div>
+    <div class="bar">
+      <div class="bar-info"><span class="bar-name">Miranda</span><span class="bar-pct">27.73%</span></div>
+      <div class="bar-track"><div class="bar-fill fill-gold"></div></div>
+    </div>
+  </div>
+
+  <div class="erased">
+    <div class="erased-title">3,984 votes erased.</div>
+    <p class="erased-sub">Both opponents disqualified after polls closed.<br><strong>Second-choice votes were never counted.</strong></p>
+  </div>
+
+  <div class="result-wrap">
+    <div class="result-label">What they published</div>
+    <div class="bar result-bar">
+      <div class="bar-info"><span class="bar-name">Miranda</span><span class="bar-pct">100%</span></div>
+      <div class="bar-track"><div class="bar-fill fill-gold-full"></div></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="page-num">02 / 04</div>
+<div class="swipe">SWIPE <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+</body>
+</html>
